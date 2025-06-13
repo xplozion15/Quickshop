@@ -1,0 +1,6 @@
+.products-heading {
+    color: var(--main-color);
+    text-align: center;
+    font-size: clamp(1.5rem, 2.5vw, 4rem);
+    margin: 0.5rem;
+}
