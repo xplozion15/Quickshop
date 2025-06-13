@@ -1,4 +1,3 @@
-
 import './Navbar.css';
 import shopppingBagIcon from '../assets/icons/shoppingbag.svg'; 
 

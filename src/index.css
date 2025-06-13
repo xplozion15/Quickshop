@@ -1,10 +1,10 @@
 :root {
-  --main-color: #14213d;
+  --main-color: rgb(33, 33, 33);
 }
 
 @font-face {
   font-family: "dosis";
-  src:url("./public/fonts/dosis.ttf");
+  src:url("./fonts/dosis.ttf");
 }
 
 /* 1. Use a more-intuitive box-sizing model */

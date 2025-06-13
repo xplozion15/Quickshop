@@ -14,11 +14,13 @@ nav {
 
 
 .navbar-items {
+    padding: 0.2rem;
     font-size: clamp(1.5rem, 2vw, 1.3rem);
     display: flex;
     gap: 2rem;
     margin-right: 1.5rem;
 }
+
 
 .shopping-bag-div {
     position: relative;
@@ -41,4 +43,8 @@ nav {
     font-size: 1rem;
     font-weight: 800;
     padding: 0.7rem;
+}
+
+a {
+    text-decoration: none;
 }
