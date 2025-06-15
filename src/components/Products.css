@@ -13,12 +13,20 @@
     font-size: 1rem;
 }
 
+.product-price {
+    background-color: var(--main-color);
+    color: white;
+    width: fit-content;
+    text-align: center;
+    padding: 0.1rem;
+    margin-top: 1px;
+    margin-bottom: 2px;
+}
+
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    border: 2px solid black;
-    padding: 2rem;
-    gap: 1.5%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));   
+    height: auto;
     
 }
 
@@ -29,11 +37,15 @@
     flex-direction: column;
     border: 2px solid black;
     max-height: 300px;
+    margin: 1rem;
    
 }
 
+
+
 .product-image {
-    width: 100%;
+    margin: auto;
+    width: 60%;
     height: 45%;
 }
 
@@ -42,6 +54,8 @@
     background-color: white;
     color: var(--main-color);
     height: 20%;
+    border: 2px solid var(--main-color);
+    cursor: pointer;
 }
 
 
@@ -50,3 +64,5 @@
     background-color: var(--main-color);
     font-weight: 800;
 }
+
+

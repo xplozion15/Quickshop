@@ -7,6 +7,8 @@ import { Products } from "./components/Products";
 function App() {
   const [currentMainContent,setCurrentMainContent] = useState("Herosection");
   const [productList,setProductList] = useState([]);
+  const [shoppingBag,setShoppingBag] = useState([]);
+  
 
   useEffect(()=>{
       const url = "https://fakestoreapi.com/products?limit=20";
@@ -26,9 +28,9 @@ function App() {
 
   return (
     <> 
-    <Navbar/>
+    <Navbar shoppingBag={shoppingBag}/>
     {currentMainContent === "Herosection" && <Herosection currentMainContent={currentMainContent} setCurrentMainContent={setCurrentMainContent}/>}
-    {currentMainContent==="Products" && <Products productList={productList}/>}
+    {currentMainContent==="Products" && <Products productList={productList} shoppingBag={shoppingBag} setShoppingBag={setShoppingBag}/>}
     </>
   );
 }
