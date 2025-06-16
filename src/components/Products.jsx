@@ -22,6 +22,7 @@ function Products({ productList, shoppingBag, setShoppingBag }) {
                                 itemName: product.title,
                                 itemId: product.id,
                                 itemImage: product.image,
+                                itemPrice : product.price,
                                 quantity: 1,
                             };
 

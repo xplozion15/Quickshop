@@ -1,7 +1,7 @@
 import './Navbar.css';
 import shopppingBagIcon from '../assets/icons/shoppingbag.svg'; 
 
-function Navbar({shoppingBag}) {
+function Navbar({shoppingBag,setCurrentMainContent}) {
 
     return <>
         <nav>
@@ -11,8 +11,11 @@ function Navbar({shoppingBag}) {
             <div className="navbar-items">
                 <a href="/">Products</a>
                 <div className='shopping-bag-div'>
-                    <img src={shopppingBagIcon} alt="shopping bag" className='shopping-bag-icon'/>
-                    {shoppingBag.length > 0 && <p className='shoppingbag-count'>{shoppingBag.length}</p>}
+                    <img src={shopppingBagIcon} alt="shopping bag" className='shopping-bag-icon'onClick={()=>{
+                        console.log("i was clicked");
+                        setCurrentMainContent("Shoppingbag");
+                    }}/>
+                    {shoppingBag.length > 0 && <p className='shoppingbag-count' >{shoppingBag.length}</p>}
                 </div>
                 
             </div>

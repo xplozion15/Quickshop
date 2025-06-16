@@ -3,6 +3,8 @@ import "./App.css";
 import { Navbar } from "./components/Navbar";
 import { Herosection } from "./components/Herosection";
 import { Products } from "./components/Products";
+import { ShoppingbagComponent } from "./components/ShoppingBagComponent";
+
 
 function App() {
   const [currentMainContent,setCurrentMainContent] = useState("Herosection");
@@ -28,9 +30,11 @@ function App() {
 
   return (
     <> 
-    <Navbar shoppingBag={shoppingBag}/>
+    <Navbar shoppingBag={shoppingBag} setCurrentMainContent={setCurrentMainContent}/>
     {currentMainContent === "Herosection" && <Herosection currentMainContent={currentMainContent} setCurrentMainContent={setCurrentMainContent}/>}
     {currentMainContent==="Products" && <Products productList={productList} shoppingBag={shoppingBag} setShoppingBag={setShoppingBag}/>}
+    {currentMainContent === "Shoppingbag" && <ShoppingbagComponent shoppingBag={shoppingBag}/>}
+    
     </>
   );
 }
