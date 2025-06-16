@@ -1,58 +1,53 @@
 .hero-image {
-    margin: auto;
-    margin-top: 2rem;
-    width: 40rem;
-    height: 26rem;
-   
+  margin: auto;
+  margin-top: 2rem;
+  width: 40rem;
+  height: 26rem;
 }
 
 .hero-section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 90vh;
-    gap: 3%;
-    
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  gap: 3%;
 }
 
-.hero-heading,.hero-paragraph {
-    color: var(--main-color);
+.hero-heading,
+.hero-paragraph {
+  color: var(--main-color);
 }
-
 
 .hero-heading {
-    font-size: clamp(1.3rem, 12vw, 2.8rem);;
+  font-size: clamp(1.3rem, 12vw, 2.8rem);
 }
 
 .hero-paragraph {
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
 
-
 .start-shopping-button {
-    color: var(--main-color);
-    background-color: white;
-    margin: 1rem 0 1rem 0 ;
-    width: 9rem;
-    height: 3rem;
+  color: var(--main-color);
+  background-color: white;
+  margin: 1rem 0 1rem 0;
+  width: 9rem;
+  height: 3rem;
 }
 
 .start-shopping-button:hover {
-    color: white;
-    background-color: var(--main-color);
-    cursor: pointer;
-    font-weight: 600;
-    
+  color: white;
+  background-color: var(--main-color);
+  cursor: pointer;
+  font-weight: 600;
 }
 
-
 .hero-section-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-    /* border: 2px solid black; */
-    width: 30%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* border: 2px solid black; */
+  width: 30%;
+  height: 100%;
 }

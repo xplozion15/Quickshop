@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "dosis";
-  src:url("./fonts/dosis.ttf");
+  src: url("./fonts/dosis.ttf");
 }
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -16,9 +16,8 @@
 
 /* 2. Remove default margin */
 * {
-
   margin: 0;
-  font-family:'dosis','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "dosis", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
 }
 
