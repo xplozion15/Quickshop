@@ -1,0 +1,21 @@
+
+.checkout-div {
+    padding: 2rem;
+    height: 70vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.checkout-text {
+    color: var(--main-color);
+    text-align: center;
+}
+
+
+.tick-icon {
+    width: 10rem;
+}

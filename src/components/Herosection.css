@@ -20,7 +20,7 @@
 }
 
 .hero-heading {
-  font-size: clamp(1.3rem, 12vw, 2.8rem);
+  font-size: clamp(1rem, 10vw, 2.8rem);
 }
 
 .hero-paragraph {
@@ -50,4 +50,26 @@
   /* border: 2px solid black; */
   width: 30%;
   height: 100%;
+}
+
+
+@media (max-width: 767px) {
+    .hero-section {
+      align-items: center;
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
+    
+    .hero-section-left {
+      width: 90%;
+      margin: auto;
+      align-items: center;
+    }
+    
+    .hero-paragraph {
+      padding: 1rem;
+    }
+    .hero-image {
+      padding: 1rem;
+    }
 }

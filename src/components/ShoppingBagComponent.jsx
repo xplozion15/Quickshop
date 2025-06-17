@@ -14,7 +14,7 @@ function getTotal(array) {
   return result;
 }
 
-function ShoppingbagComponent({ shoppingBag, setShoppingBag }) {
+function ShoppingbagComponent({ shoppingBag, setShoppingBag, setCurrentMainContent }) {
   return (
     <>
       <h2 className="shopping-bag-heading">Shopping bag</h2>
@@ -118,15 +118,15 @@ function ShoppingbagComponent({ shoppingBag, setShoppingBag }) {
         </div>
         <div className="shopping-bag-total">
           <h2 className="shopping-bag-total-heading">Order Summary</h2>
-          
+
           {shoppingBag.length === 0 ? <h3 className="shopping-bag-total-cost">
             $ {0.00}</h3> : <h3 className="shopping-bag-total-cost">
             $ {(getTotal(shoppingBag) + TAX).toFixed(2)}
           </h3>}
           <div className="shopping-bag-subtotal-div">
             <p>Subtotal</p>
-            {shoppingBag.length === 0 ?  <p>{0.00}</p> :  <p>{getTotal(shoppingBag).toFixed(2)}</p>}
-           
+            {shoppingBag.length === 0 ? <p>{0.00}</p> : <p>{getTotal(shoppingBag).toFixed(2)}</p>}
+
           </div>
           <div className="shopping-bag-tax-div">
             <p>Tax</p>
@@ -140,9 +140,19 @@ function ShoppingbagComponent({ shoppingBag, setShoppingBag }) {
             </p> : <p className="total-paragraph">
               {(getTotal(shoppingBag) + TAX).toFixed(2)}
             </p>}
-            
+
           </div>
-          <button className="checkout-button">Checkout</button>
+          <button
+            className="checkout-button"
+            onClick={() => {
+              if (shoppingBag.length !== 0) {
+                setCurrentMainContent("Checkoutpage");
+              }
+            }}
+          >
+            Checkout
+          </button>
+
         </div>
       </div>
     </>
