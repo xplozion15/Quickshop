@@ -33,6 +33,7 @@
   margin: 1rem 0 1rem 0;
   width: 9rem;
   height: 3rem;
+  border: 2px solid var(--main-color);
 }
 
 .start-shopping-button:hover {
@@ -50,6 +51,34 @@
   /* border: 2px solid black; */
   width: 30%;
   height: 100%;
+}
+
+
+
+
+@media (max-width: 1024px) and (orientation: portrait) {
+
+      .hero-section {
+      align-items: center;
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
+    
+    .hero-section-left {
+      width: 90%;
+      margin: auto;
+      align-items: center;
+    }
+    
+    .hero-paragraph {
+      padding: 1rem;
+    }
+    .hero-image {
+      padding: 1rem;
+    }
+
+  
+
 }
 
 
