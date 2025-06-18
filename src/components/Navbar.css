@@ -10,6 +10,7 @@ nav {
   margin-left: 1rem;
   font-size: clamp(2rem, 2.5vw, 2.2rem);
   font-weight: 800;
+  cursor: pointer;
 }
 
 .navbar-items {
@@ -28,6 +29,7 @@ nav {
 }
 
 .shoppingbag-count {
+ 
   position: absolute;
   left: 50%;
   top: -20%;

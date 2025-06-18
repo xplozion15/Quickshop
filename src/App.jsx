@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { Navbar } from "./components/Navbar";
-import { Herosection } from "./components/Herosection";
-import { Products } from "./components/Products";
-import { ShoppingbagComponent } from "./components/ShoppingBagComponent";
-import { CheckoutPage } from "./components/CheckoutPage";
+import { Outlet } from "react-router-dom";
 
 function App() {
-  const [currentMainContent, setCurrentMainContent] = useState("Herosection");
+
   const [productList, setProductList] = useState([]);
   const [shoppingBag, setShoppingBag] = useState([]);
 
@@ -28,32 +25,8 @@ function App() {
 
   return (
     <>
-      <Navbar
-        shoppingBag={shoppingBag}
-        setCurrentMainContent={setCurrentMainContent}
-      />
-      {currentMainContent === "Herosection" && (
-        <Herosection
-          currentMainContent={currentMainContent}
-          setCurrentMainContent={setCurrentMainContent}
-        />
-      )}
-      {currentMainContent === "Products" && (
-        <Products
-          productList={productList}
-          shoppingBag={shoppingBag}
-          setShoppingBag={setShoppingBag}
-        />
-      )}
-      {currentMainContent === "Shoppingbag" && (
-        <ShoppingbagComponent
-          shoppingBag={shoppingBag}
-          setShoppingBag={setShoppingBag}
-          setCurrentMainContent={setCurrentMainContent}
-        />
-      )}
-
-      {currentMainContent === "Checkoutpage" && <CheckoutPage/>}
+      <Navbar shoppingBag={shoppingBag}/>
+      <Outlet context={{ productList, shoppingBag, setShoppingBag }} />
     </>
   );
 }

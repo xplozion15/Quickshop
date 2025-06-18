@@ -1,24 +1,29 @@
 import "./Navbar.css";
 import shopppingBagIcon from "../assets/icons/shoppingbag.svg";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function Navbar({ shoppingBag, setCurrentMainContent }) {
+
+
+function Navbar({shoppingBag}) {
+  const navigate = useNavigate();
   return (
     <>
       <nav>
         <div className="logo-container">
-          <p className="logo">Quickshop.</p>
+          <p className="logo" onClick={()=>{
+            navigate("/");
+          }}>Quickshop.</p>
         </div>
         <div className="navbar-items">
-          <a href="/">Products</a>
-          <div className="shopping-bag-div">
+          <Link to={"/Products"}>Products</Link>
+          <div className="shopping-bag-div" onClick={() => {
+                navigate("/Shoppingbag")
+              }}>
             <img
               src={shopppingBagIcon}
               alt="shopping bag"
               className="shopping-bag-icon"
-              onClick={() => {
-                console.log("i was clicked");
-                setCurrentMainContent("Shoppingbag");
-              }}
             />
             {shoppingBag.length > 0 && (
               <p className="shoppingbag-count">{shoppingBag.length}</p>

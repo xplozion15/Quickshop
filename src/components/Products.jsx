@@ -1,6 +1,8 @@
 import "./Products.css";
+import { useOutletContext } from "react-router-dom";
 
-function Products({ productList, shoppingBag, setShoppingBag }) {
+function Products() {
+  const { productList, shoppingBag, setShoppingBag } = useOutletContext();
   return (
     <>
       <h2 className="products-heading">Products</h2>

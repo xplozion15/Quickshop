@@ -1,7 +1,10 @@
 import "./Herosection.css";
 import heroImage from "../assets/images/heroimage.png";
+import { useNavigate } from "react-router-dom";
 
-function Herosection({ currentMainContent, setCurrentMainContent }) {
+function Herosection() {
+    const navigate = useNavigate();
+    
   return (
     <>
       <div className="hero-section">
@@ -15,7 +18,8 @@ function Herosection({ currentMainContent, setCurrentMainContent }) {
           <button
             className="start-shopping-button"
             onClick={() => {
-              setCurrentMainContent("Products");
+              // setCurrentMainContent("Products");
+                navigate("/Products")
             }}
           >
             START SHOPPING

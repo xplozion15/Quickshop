@@ -2,19 +2,26 @@ import "./ShoppingBagComponent.css";
 import deleteicon from "../assets/icons/deleteicon.svg";
 import plusIcon from "../assets/icons/plus.svg";
 import minusIcon from "../assets/icons/minus.svg";
+import { useNavigate } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 
 const TAX = 20.0;
 
-function getTotal(array) {
-  let result = 0;
 
+function getTotal(array) {
+  
+  let result = 0;
   array.forEach((item) => {
     result = item.quantity * item.itemPrice + result;
   });
   return result;
 }
 
-function ShoppingbagComponent({ shoppingBag, setShoppingBag, setCurrentMainContent }) {
+function ShoppingbagComponent() {
+  let navigate = useNavigate("");
+  
+  const { productList, shoppingBag, setShoppingBag } = useOutletContext();
+
   return (
     <>
       <h2 className="shopping-bag-heading">Shopping bag</h2>
@@ -146,7 +153,7 @@ function ShoppingbagComponent({ shoppingBag, setShoppingBag, setCurrentMainConte
             className="checkout-button"
             onClick={() => {
               if (shoppingBag.length !== 0) {
-                setCurrentMainContent("Checkoutpage");
+                navigate("/Checkoutpage");
               }
             }}
           >

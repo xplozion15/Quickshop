@@ -1,34 +1,30 @@
-
-.checkout-div {
-    padding: 2rem;
-    height: 90vh;
-    width: 90vw;
+.not-found-container {
     margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 2rem;
+    justify-content: center;
+    width: 90vw;
+    height: 90vh;
 }
 
+.not-found-container > h1 {
+    font-size: 2.5rem;
+    margin: 2rem;
+}
 
-.checkout-text {
+.not-found-text {
     color: var(--main-color);
+    font-size: 1.5rem;
     text-align: center;
-    font-size: 1.3rem;
 }
 
 
-.checkout-heading {
-    font-size: 2.3rem;
-}
-
-
-.smile-icon {
+.sad-icon {
     width: 25%;
 }
 
-.go-home-checkout-button {
+.not-found-button {
     transition: 400ms;
     border: 2px solid black;
     margin: 2rem;
@@ -38,7 +34,7 @@
     background-color: white;
 }
 
-.go-home-checkout-button:hover {
+.not-found-button:hover {
     background-color: var(--main-color);
     color: white;
 }
