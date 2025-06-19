@@ -1,44 +1,40 @@
-
 .checkout-div {
-    padding: 2rem;
-    height: 90vh;
-    width: 90vw;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+  padding: 2rem;
+  height: 90vh;
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
-
 
 .checkout-text {
-    color: var(--main-color);
-    text-align: center;
-    font-size: 1.3rem;
+  color: var(--main-color);
+  text-align: center;
+  font-size: 1.3rem;
 }
-
 
 .checkout-heading {
-    font-size: 2.3rem;
+  font-size: 2.3rem;
 }
 
-
 .smile-icon {
-    width: 25%;
+  width: 25%;
 }
 
 .go-home-checkout-button {
-    transition: 400ms;
-    border: 2px solid black;
-    margin: 2rem;
-    width: 12rem;
-    height: 3.5rem;
-    color: var(--main-color);
-    background-color: white;
+  transition: 400ms;
+  border: 2px solid black;
+  margin: 2rem;
+  width: 12rem;
+  height: 3.5rem;
+  color: var(--main-color);
+  background-color: white;
 }
 
 .go-home-checkout-button:hover {
-    background-color: var(--main-color);
-    color: white;
+  background-color: var(--main-color);
+  color: white;
 }

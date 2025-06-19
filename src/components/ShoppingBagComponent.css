@@ -7,13 +7,10 @@
 }
 
 .shopping-bag-items {
-  
   width: 50%;
   display: flex;
   flex-direction: column;
 }
-
-
 
 .shopping-bag-heading {
   color: var(--main-color);
@@ -32,7 +29,6 @@
   align-items: center;
   padding: 1rem;
   margin: 5px;
-  
 }
 
 .purchased-item-name,
@@ -101,7 +97,6 @@
   width: 25%;
 }
 
-
 .shopping-bag-total-cost {
   font-weight: 800;
   font-size: clamp(0.7rem, 1.5vw, 2.5rem);
@@ -154,83 +149,68 @@
 .empty-shopping-bag {
   color: var(--main-color);
   margin: 1rem;
-  
 }
-
-
-
-
-
 
 @media (max-width: 1024px) and (orientation: portrait) {
+  .shopping-bag-container {
+    flex-direction: column;
+  }
 
-      .shopping-bag-container {
-      flex-direction: column;
+  .shopping-bag-items {
+    width: 100%;
+  }
 
-    }
+  .shopping-bag-total {
+    width: 100%;
+  }
 
-    .shopping-bag-items {
-      width: 100%;
-    }
+  .delete-item-icon {
+    width: 6%;
+  }
 
-    .shopping-bag-total {
-      width: 100%;
-    }
+  .checkout-button {
+    width: 50%;
+  }
 
-    .delete-item-icon {
-      width: 6%;
-    }
+  .purchased-item-name,
+  .purchased-item-price {
+    font-size: 1.3rem;
+  }
 
-    .checkout-button {
-      width: 50%;
-    }
+  .purchased-item-quantity {
+    font-size: 0.7rem;
+  }
 
-    .purchased-item-name,
-.purchased-item-price {
-  
-  font-size: 1.3rem;
+  .shopping-bag-total-cost {
+    font-size: 1.5rem;
+  }
 }
-
-.purchased-item-quantity {
-  font-size: 0.7rem;
-}
-
-
-
-.shopping-bag-total-cost {
-  font-size: 1.5rem;
-}
-
-
-} 
-
 
 @media (max-width: 767px) {
-    .shopping-bag-container {
-      flex-direction: column;
+  .shopping-bag-container {
+    flex-direction: column;
+  }
 
-    }
+  .shopping-bag-items {
+    width: 100%;
+  }
 
-    .shopping-bag-items {
-      width: 100%;
-    }
+  .shopping-bag-total {
+    width: 100%;
+  }
 
-    .shopping-bag-total {
-      width: 100%;
-    }
+  .delete-item-icon {
+    width: 10%;
+  }
 
-    .delete-item-icon {
-      width: 10%;
-    }
-
-     .purchased-item-name,
-  .purchased-item-price,.purchased-item-quantity  {
-    font-size: 0.5rem; 
+  .purchased-item-name,
+  .purchased-item-price,
+  .purchased-item-quantity {
+    font-size: 0.5rem;
     font-weight: 800;
   }
 
-
   .shopping-bag-total-cost {
-    font-size: 2rem; 
+    font-size: 2rem;
   }
-} 
+}

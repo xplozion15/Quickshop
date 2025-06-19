@@ -3,23 +3,29 @@ import shopppingBagIcon from "../assets/icons/shoppingbag.svg";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-
-
-function Navbar({shoppingBag}) {
+function Navbar({ shoppingBag }) {
   const navigate = useNavigate();
   return (
     <>
       <nav>
         <div className="logo-container">
-          <p className="logo" onClick={()=>{
-            navigate("/");
-          }}>Quickshop.</p>
+          <p
+            className="logo"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            Quickshop.
+          </p>
         </div>
         <div className="navbar-items">
           <Link to={"/Products"}>Products</Link>
-          <div className="shopping-bag-div" onClick={() => {
-                navigate("/Shoppingbag")
-              }}>
+          <div
+            className="shopping-bag-div"
+            onClick={() => {
+              navigate("/Shoppingbag");
+            }}
+          >
             <img
               src={shopppingBagIcon}
               alt="shopping bag"

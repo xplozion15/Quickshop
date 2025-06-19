@@ -9,26 +9,16 @@ import { Products } from "./components/Products.jsx";
 import { ShoppingbagComponent } from "./components/ShoppingBagComponent.jsx";
 import { NotFoundPage } from "./components/NotFoundPage.jsx";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
-    errorElement : <NotFoundPage/>,
-     children: [
-      { path: "/", 
-        element: <Herosection />, 
-        
-      },
-      { path: "Products", 
-        element: <Products/>,
-      },
-      { path: "Shoppingbag", 
-        element: <ShoppingbagComponent/> 
-      },
-      { path: "Checkoutpage", 
-        element: <CheckoutPage/> 
-      },
+    element: <App />,
+    errorElement: <NotFoundPage />,
+    children: [
+      { path: "/", element: <Herosection /> },
+      { path: "Products", element: <Products /> },
+      { path: "Shoppingbag", element: <ShoppingbagComponent /> },
+      { path: "Checkoutpage", element: <CheckoutPage /> },
     ],
   },
 ]);

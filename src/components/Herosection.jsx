@@ -3,11 +3,11 @@ import heroImage from "../assets/images/heroimage.png";
 import { useNavigate } from "react-router-dom";
 
 function Herosection() {
-    const navigate = useNavigate();
-    
+  const navigate = useNavigate();
+
   return (
     <>
-      <div className="hero-section">
+      <div className="hero-section" data-testid="hero-section">
         <div className="hero-section-left">
           <h1 className="hero-heading">Welcome to Quickshop.</h1>
           <p className="hero-paragraph">
@@ -19,7 +19,7 @@ function Herosection() {
             className="start-shopping-button"
             onClick={() => {
               // setCurrentMainContent("Products");
-                navigate("/Products")
+              navigate("/Products");
             }}
           >
             START SHOPPING

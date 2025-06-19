@@ -41,13 +41,12 @@ function Products() {
                       let updatedBag = [...prevBag];
                       let itemToUpdate = updatedBag[index];
 
-                      if(itemToUpdate.quantity !== 5) {
+                      if (itemToUpdate.quantity !== 5) {
                         updatedBag[index] = {
-                        ...itemToUpdate,
-                        quantity: itemToUpdate.quantity + 1,
-                      };
+                          ...itemToUpdate,
+                          quantity: itemToUpdate.quantity + 1,
+                        };
                       }
-                      
 
                       return updatedBag;
                     });
