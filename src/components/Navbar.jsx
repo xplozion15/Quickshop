@@ -20,7 +20,9 @@ function Navbar({ shoppingBag }) {
           </p>
         </div>
         <div className="navbar-items">
-          <Link to={"/Products"} data-testid="products-link">Products</Link>
+          <Link to={"/Products"} data-testid="products-link">
+            Products
+          </Link>
           <div
             className="shopping-bag-div"
             data-testid="shopping-bag-icon-div"
@@ -34,7 +36,9 @@ function Navbar({ shoppingBag }) {
               className="shopping-bag-icon"
             />
             {shoppingBag.length > 0 && (
-              <p className="shoppingbag-count" data-testid="shoppingbag-count">{shoppingBag.length}</p>
+              <p className="shoppingbag-count" data-testid="shoppingbag-count">
+                {shoppingBag.length}
+              </p>
             )}
           </div>
         </div>

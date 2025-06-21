@@ -4,7 +4,6 @@ import { Navbar } from "./components/Navbar";
 import { Outlet } from "react-router-dom";
 
 function App() {
-
   const [productList, setProductList] = useState([]);
   const [shoppingBag, setShoppingBag] = useState([]);
 
@@ -25,7 +24,7 @@ function App() {
 
   return (
     <>
-      <Navbar shoppingBag={shoppingBag}/>
+      <Navbar shoppingBag={shoppingBag} />
       <Outlet context={{ productList, shoppingBag, setShoppingBag }} />
     </>
   );

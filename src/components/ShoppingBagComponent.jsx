@@ -78,7 +78,10 @@ function ShoppingbagComponent() {
                     }}
                   />
 
-                  <p className="purchased-item-quantity" data-testid="purchased-item-quantity">
+                  <p
+                    className="purchased-item-quantity"
+                    data-testid="purchased-item-quantity"
+                  >
                     {purchasedItem.quantity}
                   </p>
                   <img
@@ -135,7 +138,9 @@ function ShoppingbagComponent() {
           <h2 className="shopping-bag-total-heading">Order Summary</h2>
 
           {shoppingBag.length === 0 ? (
-            <h3 className="shopping-bag-total-cost" data-testid="total-heading">$ {0.0}</h3>
+            <h3 className="shopping-bag-total-cost" data-testid="total-heading">
+              $ {0.0}
+            </h3>
           ) : (
             <h3 className="shopping-bag-total-cost" data-testid="total-heading">
               $ {(getTotal(shoppingBag) + TAX).toFixed(2)}
@@ -146,7 +151,9 @@ function ShoppingbagComponent() {
             {shoppingBag.length === 0 ? (
               <p data-testid="subtotal-paragraph">{0.0}</p>
             ) : (
-              <p data-testid="subtotal-paragraph">{getTotal(shoppingBag).toFixed(2)}</p>
+              <p data-testid="subtotal-paragraph">
+                {getTotal(shoppingBag).toFixed(2)}
+              </p>
             )}
           </div>
           <div className="shopping-bag-tax-div">
@@ -157,7 +164,9 @@ function ShoppingbagComponent() {
           <div className="shopping-bag-costinfo-div">
             <h3 className="total-heading">Total</h3>
             {shoppingBag.length === 0 ? (
-              <p className="total-paragraph" data-testid="total-paragraph">{0.0}</p>
+              <p className="total-paragraph" data-testid="total-paragraph">
+                {0.0}
+              </p>
             ) : (
               <p className="total-paragraph" data-testid="total-paragraph">
                 {(getTotal(shoppingBag) + TAX).toFixed(2)}
