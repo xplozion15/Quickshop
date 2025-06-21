@@ -11,6 +11,7 @@ function Navbar({ shoppingBag }) {
         <div className="logo-container">
           <p
             className="logo"
+            data-testid="logo"
             onClick={() => {
               navigate("/");
             }}
@@ -19,9 +20,10 @@ function Navbar({ shoppingBag }) {
           </p>
         </div>
         <div className="navbar-items">
-          <Link to={"/Products"}>Products</Link>
+          <Link to={"/Products"} data-testid="products-link">Products</Link>
           <div
             className="shopping-bag-div"
+            data-testid="shopping-bag-icon-div"
             onClick={() => {
               navigate("/Shoppingbag");
             }}
