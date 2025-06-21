@@ -32,7 +32,7 @@ function Navbar({ shoppingBag }) {
               className="shopping-bag-icon"
             />
             {shoppingBag.length > 0 && (
-              <p className="shoppingbag-count">{shoppingBag.length}</p>
+              <p className="shoppingbag-count" data-testid="shoppingbag-count">{shoppingBag.length}</p>
             )}
           </div>
         </div>
