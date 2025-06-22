@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "dosis";
-  src: url("./fonts/dosis.ttf");
+  src: url("/fonts/dosis.ttf");
 }
 
 /* 1. Use a more-intuitive box-sizing model */

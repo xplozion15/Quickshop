@@ -9,7 +9,7 @@ A minimal e-commerce frontend built with React. Users can browse products, add t
 ## Learnings
 
 While building QuickShop, I learned and practiced a lot of essential frontend concepts:
-
+- Learnt how to use React Router for routing in my React application.
 - Practiced writing  tests with Vitest and React testing library
 - Got familiar with mocking `fetch` requests for API calls in tests
 - Strengthened my skills in React by using concepts like useState,components,useEffect etc.
