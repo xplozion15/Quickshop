@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import App from "../App";
-import { MemoryRouter, redirect } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 import { RouterProvider, createMemoryRouter } from "react-router-dom";
 import { NotFoundPage } from "../components/NotFoundPage";
 import { Herosection } from "../components/Herosection";

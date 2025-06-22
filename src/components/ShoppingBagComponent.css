@@ -20,15 +20,25 @@
 }
 
 .purchased-item-div {
-  color: var(--main-color);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
+
   width: 100%;
   border: 2px solid black;
-  justify-content: space-around;
-  align-items: center;
   padding: 1rem;
   margin: 5px;
+
+  height: 180px; 
+  box-sizing: border-box; 
+}
+
+.purchased-item-bottom-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 60%;
 }
 
 .purchased-item-name,
@@ -40,11 +50,18 @@
 }
 
 .purchased-item-name {
-  width: 25%;
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  padding-left: 1rem;
 }
+
+
 .purchased-itemimage {
   width: 15%;
-  min-height: 70px;
+  height: auto;
+  aspect-ratio: 1; 
+  object-fit: contain;
 }
 
 .delete-item-icon {
@@ -77,9 +94,7 @@
   background-color: rgb(215, 215, 215);
 }
 
-.purchased-item-price {
-  width: 10%;
-}
+
 
 .purchased-item-quantity {
   width: 10%;
@@ -204,10 +219,14 @@
   }
 
   .purchased-item-name,
-  .purchased-item-price,
+  .purchased-item-price{
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+
   .purchased-item-quantity {
-    font-size: 0.5rem;
-    font-weight: 800;
+    font-size: 0.9rem;
   }
 
   .shopping-bag-total-cost {

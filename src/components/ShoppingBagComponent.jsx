@@ -18,7 +18,7 @@ function getTotal(array) {
 function ShoppingbagComponent() {
   let navigate = useNavigate("");
 
-  const { productList, shoppingBag, setShoppingBag } = useOutletContext();
+  const { shoppingBag, setShoppingBag } = useOutletContext();
 
   return (
     <>
@@ -40,96 +40,103 @@ function ShoppingbagComponent() {
 
           {shoppingBag.map((purchasedItem) => {
             return (
+
               <div className="purchased-item-div" key={purchasedItem.itemId}>
-                <img
-                  src={purchasedItem.itemImage}
-                  alt="purchased-item"
-                  className="purchased-itemimage"
-                />
-
-                <p className="purchased-item-name">{purchasedItem.itemName}</p>
-                <div className="quantity-div">
+                <div className="purchased-item-top-div">
+                  <p className="purchased-item-name">{purchasedItem.itemName}</p>
+                </div>
+                <div className="purchased-item-bottom-div">
                   <img
-                    src={minusIcon}
-                    className="minus-icon quantity-icons"
-                    alt="minus-icon"
-                    onClick={() => {
-                      const index = shoppingBag.findIndex(
-                        (item) => item.itemId === purchasedItem.itemId,
-                      );
-
-                      setShoppingBag((prevBag) => {
-                        let updatedBag = [...prevBag];
-                        let itemToUpdate = updatedBag[index];
-                        if (itemToUpdate.quantity === 1) {
-                          updatedBag[index] = {
-                            ...itemToUpdate,
-                            quantity: itemToUpdate.quantity,
-                          };
-                        } else {
-                          updatedBag[index] = {
-                            ...itemToUpdate,
-                            quantity: itemToUpdate.quantity - 1,
-                          };
-                        }
-
-                        return updatedBag;
-                      });
-                    }}
+                    src={purchasedItem.itemImage}
+                    alt="purchased-item"
+                    className="purchased-itemimage"
                   />
 
-                  <p
-                    className="purchased-item-quantity"
-                    data-testid="purchased-item-quantity"
-                  >
-                    {purchasedItem.quantity}
+
+                  <div className="quantity-div">
+                    <img
+                      src={minusIcon}
+                      className="minus-icon quantity-icons"
+                      alt="minus-icon"
+                      onClick={() => {
+                        const index = shoppingBag.findIndex(
+                          (item) => item.itemId === purchasedItem.itemId,
+                        );
+
+                        setShoppingBag((prevBag) => {
+                          let updatedBag = [...prevBag];
+                          let itemToUpdate = updatedBag[index];
+                          if (itemToUpdate.quantity === 1) {
+                            updatedBag[index] = {
+                              ...itemToUpdate,
+                              quantity: itemToUpdate.quantity,
+                            };
+                          } else {
+                            updatedBag[index] = {
+                              ...itemToUpdate,
+                              quantity: itemToUpdate.quantity - 1,
+                            };
+                          }
+
+                          return updatedBag;
+                        });
+                      }}
+                    />
+
+                    <p
+                      className="purchased-item-quantity"
+                      data-testid="purchased-item-quantity"
+                    >
+                      {purchasedItem.quantity}
+                    </p>
+                    <img
+                      src={plusIcon}
+                      className="plus-icon quantity-icons"
+                      alt="plus-icon"
+                      onClick={() => {
+                        const index = shoppingBag.findIndex(
+                          (item) => item.itemId === purchasedItem.itemId,
+                        );
+
+                        setShoppingBag((prevBag) => {
+                          let updatedBag = [...prevBag];
+                          let itemToUpdate = updatedBag[index];
+                          if (itemToUpdate.quantity === 5) {
+                            updatedBag[index] = {
+                              ...itemToUpdate,
+                              quantity: itemToUpdate.quantity,
+                            };
+                          } else {
+                            updatedBag[index] = {
+                              ...itemToUpdate,
+                              quantity: itemToUpdate.quantity + 1,
+                            };
+                          }
+
+                          return updatedBag;
+                        });
+                      }}
+                    />
+                  </div>
+
+                  <p className="purchased-item-price">
+                    $ {purchasedItem.itemPrice.toFixed(2)}
                   </p>
+
                   <img
-                    src={plusIcon}
-                    className="plus-icon quantity-icons"
-                    alt="plus-icon"
+                    src={deleteicon}
+                    className="delete-item-icon"
+                    alt="del-icon"
                     onClick={() => {
-                      const index = shoppingBag.findIndex(
-                        (item) => item.itemId === purchasedItem.itemId,
+                      setShoppingBag((prevBag) =>
+                        prevBag.filter(
+                          (item) => item.itemId !== purchasedItem.itemId,
+                        ),
                       );
-
-                      setShoppingBag((prevBag) => {
-                        let updatedBag = [...prevBag];
-                        let itemToUpdate = updatedBag[index];
-                        if (itemToUpdate.quantity === 5) {
-                          updatedBag[index] = {
-                            ...itemToUpdate,
-                            quantity: itemToUpdate.quantity,
-                          };
-                        } else {
-                          updatedBag[index] = {
-                            ...itemToUpdate,
-                            quantity: itemToUpdate.quantity + 1,
-                          };
-                        }
-
-                        return updatedBag;
-                      });
                     }}
                   />
                 </div>
 
-                <p className="purchased-item-price">
-                  $ {purchasedItem.itemPrice.toFixed(2)}
-                </p>
-
-                <img
-                  src={deleteicon}
-                  className="delete-item-icon"
-                  alt="del-icon"
-                  onClick={() => {
-                    setShoppingBag((prevBag) =>
-                      prevBag.filter(
-                        (item) => item.itemId !== purchasedItem.itemId,
-                      ),
-                    );
-                  }}
-                />
               </div>
             );
           })}

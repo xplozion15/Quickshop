@@ -8,6 +8,8 @@ import { Herosection } from "../components/Herosection";
 import userEvent from "@testing-library/user-event";
 import { ShoppingbagComponent } from "../components/ShoppingBagComponent";
 import { CheckoutPage } from "../components/CheckoutPage";
+import { beforeEach,vi,global } from "vitest"; 
+
 
 const mockApiReturnValue = [
   {
@@ -192,11 +194,7 @@ describe("Testing the shopping bag component", () => {
       await user.click(plusIcon);
     }
 
-    const productTitle = screen.getByText(
-      /Fjallraven - Foldsack No. 1 Backpack/i,
-    );
-    const priceTitle = screen.getByText("$ 109.95", { selector: "p" });
-    const image = await screen.findByAltText(/purchased-item/i);
+   
     const quantity = screen.getByTestId(/purchased-item-quantity/i);
 
     //assert what should be in the webpage in the shoppingbag component
@@ -226,11 +224,7 @@ describe("Testing the shopping bag component", () => {
       await user.click(minusIcon);
     }
 
-    const productTitle = screen.getByText(
-      /Fjallraven - Foldsack No. 1 Backpack/i,
-    );
-    const priceTitle = screen.getByText("$ 109.95", { selector: "p" });
-    const image = await screen.findByAltText(/purchased-item/i);
+  
     const quantity = screen.getByTestId(/purchased-item-quantity/i);
 
     //assert what should be in the webpage in the shoppingbag component

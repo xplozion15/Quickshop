@@ -8,6 +8,7 @@ import { Herosection } from "../components/Herosection";
 import userEvent from "@testing-library/user-event";
 import { ShoppingbagComponent } from "../components/ShoppingBagComponent";
 import { CheckoutPage } from "../components/CheckoutPage";
+import { beforeEach,vi,global } from "vitest";
 
 const mockApiReturnValue = [
   {
