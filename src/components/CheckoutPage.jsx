@@ -5,7 +5,7 @@ import { useOutletContext } from "react-router-dom";
 
 function CheckoutPage() {
   const navigate = useNavigate();
-  const { productList, shoppingBag, setShoppingBag } = useOutletContext();
+  const { setShoppingBag } = useOutletContext();
 
   return (
     <>

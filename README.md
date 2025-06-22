@@ -4,7 +4,7 @@ A minimal e-commerce frontend built with React. Users can browse products, add t
 
 ## Deployed Site
 
-**Live Preview** → [https://xplozion15.github.io/quickshop](https://xplozion15.github.io/quickshop)
+**Live Preview** → [https://quickshop-eight.vercel.app/](https://quickshop-eight.vercel.app/)
 
 ## Learnings
 
