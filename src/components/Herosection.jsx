@@ -18,7 +18,6 @@ function Herosection() {
           <button
             className="start-shopping-button"
             onClick={() => {
-              // setCurrentMainContent("Products");
               navigate("/Products");
             }}
           >
