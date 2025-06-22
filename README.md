@@ -1,17 +1,10 @@
 # QuickShop
-
 A minimal e-commerce frontend built with React. Users can browse products, add them to their shopping bag, and simulate the checkout process.
 
 ## Deployed Site
-
 **Live Preview** → [https://quickshop-eight.vercel.app/](https://quickshop-eight.vercel.app/)
 
-## Screenshot
-
-![Screenshot](./src/assets/images/preview.png)
-
 ## Learnings
-
 While building QuickShop, I learned and practiced a lot of essential frontend concepts:
 
 - Learnt how to use media queries to make a webpage responsive.
@@ -25,14 +18,11 @@ While building QuickShop, I learned and practiced a lot of essential frontend co
 ## Assets & Credits
 
 ### Landing Page Photo
-
 - [Laptop on Wooden Desk](https://unsplash.com/photos/a-laptop-computer-sitting-on-top-of-a-wooden-desk-QZWF5RNYimw)  
   by [Prince Mathews Thomas](https://unsplash.com/@prince_mathews) on Unsplash
 
 ### Icons
-
 - Shopping Bag, Delete, Smile, and Sad icons by [Lucide](https://lucide.dev/)
 
 ### Font
-
 - [Dosis](https://fonts.google.com/specimen/Dosis) from Google Fonts
