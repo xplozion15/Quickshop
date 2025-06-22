@@ -40,10 +40,11 @@ function ShoppingbagComponent() {
 
           {shoppingBag.map((purchasedItem) => {
             return (
-
               <div className="purchased-item-div" key={purchasedItem.itemId}>
                 <div className="purchased-item-top-div">
-                  <p className="purchased-item-name">{purchasedItem.itemName}</p>
+                  <p className="purchased-item-name">
+                    {purchasedItem.itemName}
+                  </p>
                 </div>
                 <div className="purchased-item-bottom-div">
                   <img
@@ -51,7 +52,6 @@ function ShoppingbagComponent() {
                     alt="purchased-item"
                     className="purchased-itemimage"
                   />
-
 
                   <div className="quantity-div">
                     <img
@@ -136,7 +136,6 @@ function ShoppingbagComponent() {
                     }}
                   />
                 </div>
-
               </div>
             );
           })}

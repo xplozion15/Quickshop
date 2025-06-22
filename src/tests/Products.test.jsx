@@ -7,7 +7,6 @@ import { Products } from "../components/Products";
 import { Herosection } from "../components/Herosection";
 import userEvent from "@testing-library/user-event";
 
-
 beforeEach(() => {
   global.fetch = vi.fn(() =>
     Promise.resolve({

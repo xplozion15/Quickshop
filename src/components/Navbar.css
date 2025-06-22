@@ -1,5 +1,4 @@
 nav {
- 
   display: flex;
   background-color: var(--main-color);
   justify-content: space-between;
@@ -7,7 +6,7 @@ nav {
   padding: 0.4rem;
   top: 0%;
   width: 100%;
-   position: fixed;
+  position: sticky;
 }
 
 .logo {

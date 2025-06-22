@@ -1,4 +1,3 @@
-
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import App from "../App";
@@ -9,7 +8,6 @@ import { Herosection } from "../components/Herosection";
 import userEvent from "@testing-library/user-event";
 import { ShoppingbagComponent } from "../components/ShoppingBagComponent";
 import { CheckoutPage } from "../components/CheckoutPage";
-
 
 const mockApiReturnValue = [
   {

@@ -9,7 +9,6 @@ import userEvent from "@testing-library/user-event";
 import { ShoppingbagComponent } from "../components/ShoppingBagComponent";
 import { CheckoutPage } from "../components/CheckoutPage";
 
-
 const mockApiReturnValue = [
   {
     id: 1,

@@ -8,8 +8,6 @@ import { Herosection } from "../components/Herosection";
 import userEvent from "@testing-library/user-event";
 import { ShoppingbagComponent } from "../components/ShoppingBagComponent";
 import { CheckoutPage } from "../components/CheckoutPage";
- 
-
 
 const mockApiReturnValue = [
   {
@@ -194,7 +192,6 @@ describe("Testing the shopping bag component", () => {
       await user.click(plusIcon);
     }
 
-   
     const quantity = screen.getByTestId(/purchased-item-quantity/i);
 
     //assert what should be in the webpage in the shoppingbag component
@@ -224,7 +221,6 @@ describe("Testing the shopping bag component", () => {
       await user.click(minusIcon);
     }
 
-  
     const quantity = screen.getByTestId(/purchased-item-quantity/i);
 
     //assert what should be in the webpage in the shoppingbag component

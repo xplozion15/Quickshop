@@ -29,8 +29,8 @@
   padding: 1rem;
   margin: 5px;
 
-  height: 180px; 
-  box-sizing: border-box; 
+  height: 12rem;
+  box-sizing: border-box;
 }
 
 .purchased-item-bottom-div {
@@ -56,11 +56,10 @@
   padding-left: 1rem;
 }
 
-
 .purchased-itemimage {
   width: 15%;
   height: auto;
-  aspect-ratio: 1; 
+  aspect-ratio: 1;
   object-fit: contain;
 }
 
@@ -93,8 +92,6 @@
   cursor: pointer;
   background-color: rgb(215, 215, 215);
 }
-
-
 
 .purchased-item-quantity {
   width: 10%;
@@ -219,11 +216,10 @@
   }
 
   .purchased-item-name,
-  .purchased-item-price{
+  .purchased-item-price {
     font-size: 1.2rem;
     font-weight: 600;
   }
-
 
   .purchased-item-quantity {
     font-size: 0.9rem;
