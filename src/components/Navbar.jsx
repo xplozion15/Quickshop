@@ -7,7 +7,7 @@ function Navbar({ shoppingBag }) {
   const navigate = useNavigate();
   return (
     <>
-      <nav>
+      <nav className="navbar">
         <div className="logo-container">
           <p
             className="logo"
