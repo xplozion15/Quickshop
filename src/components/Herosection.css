@@ -1,8 +1,8 @@
 .hero-image {
   margin: auto;
   margin-top: 2rem;
-  width: 40rem;
-  height: 22rem;
+  width: 45rem;
+  height: 25rem;
 }
 
 .hero-section {
@@ -94,5 +94,6 @@
 
   .hero-image {
     padding: 1.5rem;
+    height: 90%;
   }
 }
