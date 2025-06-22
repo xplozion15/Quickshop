@@ -2,7 +2,7 @@
   margin: auto;
   margin-top: 2rem;
   width: 40rem;
-  height: 26rem;
+  height: 22rem;
 }
 
 .hero-section {
@@ -20,7 +20,7 @@
 }
 
 .hero-heading {
-  font-size: clamp(1rem, 10vw, 2.8rem);
+  font-size: clamp(1rem, 9.7vw, 2.8rem);
 }
 
 .hero-paragraph {
@@ -67,6 +67,7 @@
   .hero-paragraph {
     padding: 1rem;
   }
+
   .hero-image {
     padding: 1rem;
   }
@@ -86,10 +87,12 @@
     align-items: center;
   }
 
+
   .hero-paragraph {
     padding: 1rem;
   }
+
   .hero-image {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 }
